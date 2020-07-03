@@ -16,4 +16,6 @@ public:
 
     double GetY();
     double GetX();
+
+    void virtual DataInput() = 0;
 };

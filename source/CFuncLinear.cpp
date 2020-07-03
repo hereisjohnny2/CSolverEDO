@@ -1,3 +1,4 @@
+#include <iostream>
 #include "headers/CFuncLinear.hpp"
 
 double CFuncLinear::f(double x, double y) {
@@ -25,4 +26,12 @@ double CFuncLinear::GetC0() {
 
 double CFuncLinear::GetC1() {
     return mC1;
+}
+
+
+void CFuncLinear::DataInput() {
+    std::cout << "\nDigite o valor de c0: ";
+    std::cin >> mC0;
+    std::cout << "Digite o valor de c1: ";
+    std::cin >> mC1;
 }

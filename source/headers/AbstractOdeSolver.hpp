@@ -27,4 +27,5 @@ public:
 public:
     virtual double SolveEquation(CFunc* function) = 0;
     double operator()(CFunc* function);
+    void DataInput();
 };
