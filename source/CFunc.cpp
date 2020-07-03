@@ -1,7 +1,7 @@
 #include "headers/CFunc.hpp"
 
-double CFunc::operator()(double x) {
-    return f(x);
+double CFunc::operator()(double x, double y) {
+    return f(x,y);
 }
     
 void CFunc::SetY(double y){

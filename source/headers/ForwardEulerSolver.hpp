@@ -5,8 +5,8 @@ class ForwardEulerSolver: public AbstractOdeSolver {
 
 public:
     ForwardEulerSolver() = default;
-    ForwardEulerSolver(double (*function)(double,double)) : AbstractOdeSolver(function) {};
-    virtual ~ForwardEulerSolver() = default;
-    virtual double RightHandSide(double x, double y) override;
-    virtual double SolveEquation() override; 
+    ForwardEulerSolver(double _stepSize, double _initialTime, double _finalTime, double _initialValue)
+        : AbstractOdeSolver(_stepSize, _initialTime, _finalTime, _initialValue) {};
+    ~ForwardEulerSolver() = default;
+    virtual double SolveEquation(CFunc* function) override; 
 };

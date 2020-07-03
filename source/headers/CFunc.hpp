@@ -8,8 +8,8 @@ public:
     CFunc() = default;
     ~CFunc() = default;
 
-    virtual double f(double x) = 0;
-    double operator()(double x);
+    virtual double f(double x, double y) = 0;
+    double operator()(double x, double y);
     
     void SetY(double y);
     void SetX(double x);

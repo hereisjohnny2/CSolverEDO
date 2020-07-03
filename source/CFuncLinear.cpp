@@ -1,14 +1,14 @@
 #include "headers/CFuncLinear.hpp"
 
-double CFuncLinear::f(double x) {
+double CFuncLinear::f(double x, double y) {
     mX = x;
     return mY = mC0 + mC1*x;
 }
 
-double CFuncLinear::f(double x, double c0, double c1) {
+double CFuncLinear::f(double x, double y, double c0, double c1) {
     mC0 = c0;
     mC1 = c1;
-    return f(x);
+    return f(x,y);
 }
 
 void CFuncLinear::SetC0(double c0) {

@@ -11,8 +11,8 @@ public:
     CFuncLinear(double c0, double c1) : mC0(c0), mC1(c1) {};
     ~CFuncLinear() = default;
 
-    virtual double f(double x);
-    virtual double f(double x, double c0, double c1);
+    virtual double f(double x, double y);
+    virtual double f(double x, double y, double c0, double c1);
 
     void SetC0(double c0);
     void SetC1(double c1);

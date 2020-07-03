@@ -1,6 +1,11 @@
 #include "headers/AbstractOdeSolver.hpp"
 #include <cassert>
 
+
+double AbstractOdeSolver::operator()(CFunc* function) {
+    return SolveEquation(function);
+}
+
 //Defines the size of the step between each iteraction in the caculation.
 void AbstractOdeSolver::SetStepSize(double h) {
     stepSize = h;
