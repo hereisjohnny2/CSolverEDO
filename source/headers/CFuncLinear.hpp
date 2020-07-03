@@ -3,7 +3,7 @@
 
 class CFuncLinear : public CFunc
 {
-private:
+protected:
     double mC0 {0.0};
     double mC1 {0.0};
 public:
