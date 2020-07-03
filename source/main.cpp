@@ -15,21 +15,19 @@ int main()
     double finalTime = 1;
     double initialValue = 1;
 
-    std::cout << "Resolvendo EDO utilizando método Runge-Kutta: " << std::endl;
-    AbstractOdeSolver *eq1 = new RungeKutta(&linear);
-    eq1->SetStepSize(stepSize);
-    eq1->SetTimeInterval(initialTime, finalTime);
-    eq1->SetInitialValue(initialValue);
-    std::cout << eq1->SolveEquation() << std::endl;
-    delete eq1;
+    std::cout << "\nResolvendo EDO utilizando método Runge-Kutta: " << std::endl;
+    RungeKutta eq1 = RungeKutta(&linear);
+    eq1.SetStepSize(stepSize);
+    eq1.SetTimeInterval(initialTime, finalTime);
+    eq1.SetInitialValue(initialValue);
+    std::cout << eq1.SolveEquation() << std::endl;
 
     std::cout << "\nResolvendo EDO utilizando método Euler: " << std::endl;
-    AbstractOdeSolver *eq2 = new ForwardEulerSolver(&linear);
-    eq2->SetStepSize(stepSize);
-    eq2->SetTimeInterval(initialTime, finalTime);
-    eq2->SetInitialValue(initialValue);
-    std::cout << eq2->SolveEquation() << std::endl;
-    delete eq2;
+    ForwardEulerSolver eq2 = ForwardEulerSolver(&linear);
+    eq2.SetStepSize(stepSize);
+    eq2.SetTimeInterval(initialTime, finalTime);
+    eq2.SetInitialValue(initialValue);
+    std::cout << eq2.SolveEquation() << std::endl;
 
     return 0;
 }
