@@ -29,9 +29,9 @@ double CFuncLinear::GetC1() {
 }
 
 
-void CFuncLinear::DataInput() {
-    std::cout << "\nDigite o valor de c0: ";
-    std::cin >> mC0;
-    std::cout << "Digite o valor de c1: ";
-    std::cin >> mC1;
+void CFuncLinear::DataInput(std::istream& in, std::ostream& out) {
+    out << "\nDigite o valor de c0: ";
+    in >> mC0;
+    out << "Digite o valor de c1: ";
+    in >> mC1;
 }

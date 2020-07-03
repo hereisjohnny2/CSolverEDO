@@ -36,7 +36,7 @@ void EDOSolver::RunSolver() {
         break;
     }
 
-    funcao->DataInput();
+    funcao->DataInput(std::cin, std::cout);
 
     int solverEscolha;
     AbstractOdeSolver* solver;

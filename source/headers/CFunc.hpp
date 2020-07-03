@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class CFunc {
 protected:
@@ -17,5 +18,5 @@ public:
     double GetY();
     double GetX();
 
-    void virtual DataInput() = 0;
+    virtual void DataInput(std::istream& in, std::ostream& out) = 0;
 };

@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 #include "CFunc.hpp"
 
 class AbstractOdeSolver {
@@ -24,7 +25,6 @@ public:
     double GetFinalTime();
     double GetInitialValue();
 
-public:
     virtual double SolveEquation(CFunc* function) = 0;
     double operator()(CFunc* function);
     void DataInput();

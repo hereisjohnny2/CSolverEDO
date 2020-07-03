@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "headers/CFuncQuad.hpp"
 
 double CFuncQuad::f(double x, double y) {
@@ -22,8 +20,8 @@ double CFuncQuad::GetC2() {
     return mC2;
 }
 
-void CFuncQuad::DataInput() {
-    CFuncLinear::DataInput();
-    std::cout << "Digite o valor de c2: ";
-    std::cin >> mC2;
+void CFuncQuad::DataInput(std::istream& in, std::ostream& out) {
+    CFuncLinear::DataInput(in, out);
+    out << "Digite o valor de c2: ";
+    in >> mC2;
 }

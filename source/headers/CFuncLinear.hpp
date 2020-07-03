@@ -20,5 +20,5 @@ public:
     double GetC0();
     double GetC1();
 
-    void virtual DataInput() override;
+    virtual void DataInput(std::istream& in, std::ostream& out) override;
 };

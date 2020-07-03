@@ -18,5 +18,5 @@ public:
 
     double GetC2();
 
-    void virtual DataInput() override;
+    void virtual DataInput(std::istream& in, std::ostream& out) override;
 };
