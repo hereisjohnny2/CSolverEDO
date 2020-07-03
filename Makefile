@@ -62,5 +62,6 @@ objFolder:
 clean:
 	@ $(RM) ./objects/*.o $(EXE_NAME) *~
 	@ rmdir objects
+	@ $(RM) ./output/*.dat
 
 .PHONY: all clean
