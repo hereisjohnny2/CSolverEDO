@@ -8,5 +8,5 @@ public:
     ForwardEulerSolver(double (*function)(double,double)) : AbstractOdeSolver(function) {};
     virtual ~ForwardEulerSolver() = default;
     virtual double RightHandSide(double x, double y) override;
-    double SolveEquation(); 
+    virtual double SolveEquation() override; 
 };

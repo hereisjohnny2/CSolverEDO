@@ -8,5 +8,5 @@ public:
     RungeKutta(double (*function)(double,double)) : AbstractOdeSolver(function) {};
     virtual ~RungeKutta() = default;
     virtual double RightHandSide(double y, double t) override;
-    double SolveEquation(); 
+    virtual double SolveEquation() override; 
 };
